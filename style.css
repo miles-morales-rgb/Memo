@@ -1,4 +1,102 @@
-/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Prevents content from touching edges */
+}
+
+.countdown-container {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+.time-box {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    position: relative;
+}
+
+.time-box span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.time-box small {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .countdown {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+
+    .time-box {
+        width: 80px; /* Reduce box size */
+        padding: 15px;
+    }
+
+    .time-box span {
+        font-size: 2.5rem; /* Reduce font size */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .time-box {
+        width: 100px;
+        padding: 10px;
+    }
+
+    .time-box span {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* General Reset 
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +108,8 @@ body {
   line-height: 1.6;
   background-color: #f0f0f0;
 }
-
-/* Header Navigation */
+*/
+/* Header Navigation 
 header {
   display: flex;
   justify-content: space-between;
@@ -45,8 +143,8 @@ header {
   color: #00bcd4;
   text-shadow: 0 0 10px #00bcd4;
 }
-
-/* Home Section */
+*/
+/* Home Section 
 .home-section {
     display: flex;
     justify-content: center;
@@ -88,8 +186,8 @@ header {
     background-color: #008c9e;
     box-shadow: 0 0 10px #00bcd4;
 }
-
-/* About Section */
+*/
+/* About Section 
 .about{
     padding: 3rem 2rem;
     text-align: center;
@@ -175,8 +273,8 @@ footer nav a:hover{
   margin: 0 auto;
   color: black;
 }
-
-/* Gallery Section */
+*/
+/* Gallery Section 
 .gallery-section {
   padding: 2rem;
   background: #f4f4f4;
@@ -224,8 +322,8 @@ footer nav a:hover{
 .gallery-item a {
   text-decoration: none;
 }
-
-/* Contact Section */
+*/
+/* Contact Section 
 .contact-section {
   text-align: center;
   margin-top: 2rem;
@@ -251,8 +349,8 @@ footer nav a:hover{
   background-color: #008c9e;
   box-shadow: 0 0 10px #00bcd4;
 }
-
-/* Responsive Design */
+*/
+/* Responsive Design 
 @media (max-width: 768px) {
   .home-content h1 {
     font-size: 2rem;
@@ -268,3 +366,4 @@ footer nav a:hover{
     font-size: 1.5rem;
   }
 }
+*/
