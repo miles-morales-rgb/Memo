@@ -97,9 +97,6 @@ p {
   font-family: 'Georgia', serif;
 }
 
-@media (max-width: 768px) {
-
-}
 /* About Section */
 .about{
     padding: 3rem 2rem;
@@ -151,23 +148,6 @@ p {
     font-size: 1.2rem;
 }
 
-
-footer{
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-footer nav a{
-    color: #00bcd4;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer nav a:hover{
-    text-decoration: underline;
-}
 .home-content{
     position: relative;
     color: white;
