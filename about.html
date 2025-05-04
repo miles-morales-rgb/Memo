@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About — Daily Thrifty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(145deg, #1a1a1a, #333, #1a1a1a);
+      background-size: 400% 400%;
+      animation: metallicShift 10s ease infinite;
+      color: #f5f5f5;
+      overflow: hidden;
+    }
+    
+    /* Loading Screen */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    #loader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fff;
+      border-top: 6px solid #0073e6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Main Content */
+    main {
+      width: 90%;
+      max-width: 1100px;
+      margin: 6rem auto 3rem auto; /* Top margin fixed */
+      padding: 2rem;
+      background: rgba(30, 30, 30, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    main.visible {
+      opacity: 1;
+    }
+    
+    /* Go Back Button */
+    .go-back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 10000;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .go-back-btn:hover {
+      background-color: #005bb5;
+      transform: scale(1.05);
+    }
+
+    /* About Page */
+    .about-page {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .about-sidebar {
+      flex: 1 1 250px;
+      padding: 1rem;
+      background-color: rgba(0, 115, 230, 0.1);
+      border-radius: 10px;
+    }
+    .about-content {
+      flex: 3 1 600px;
+      padding: 1rem;
+    }
+    .about-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #0073e6;
+    }
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .about-logo img {
+      width: 150px;
+      height: auto;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #0073e6;
+    }
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .section-number {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    /* Metallic Background Animation */
+    @keyframes metallicShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <main id="mainContent">
+        <button onclick="history.back()" class="go-back-btn">← Go Back</button>
+            <img src="image_38_c-removebg-preview.png" alt="Logo">
+            <div class="about-content">
+                <div class="about-logo"></div>
+                <h1 class="about-title">Who we are</h1>
+                <div class="about-section">
+                    <div class="about-text">
+                        <h2>Our story <span class="section-number">/01</span></h2>
+                        <p>Under progress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("mainContent");
+      setTimeout(() => {
+        loader.classList.add("fade-out");
+        content.classList.add("visible");
+        document.body.style.overflow = "auto";
+      }, 1500);
+    });
+    </script>
+</body>
+</html>

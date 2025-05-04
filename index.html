@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Miles-Morales-Logo-PNG-Image.png" alt="Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="home-section">
+    <div class="home-content">
+      <h1>Welcome to the Memoirs</h1>
+      <p>This website contains the memoirs of beautiful moments captured in images and videos.</p>
+  
+    </div>
+  </section>
+  <section class="about">
+    <h2>About Memoirs</h2>
+    <p>Memoirs is a platform dedicated to preserving and sharing life's precious moments. Explore our collection of photos and videos and cherish the memories forever</p>
+
+    <h2>Featured Memories</h2>
+    <div class="gallery-preview">
+      <div class="gallery-items">
+        <img src="https://nbyehqtzsxcalumbnefn.supabase.co/storage/v1/object/public/memories//image%2016.jpg" alt="" srcset="">
+      </div>
+      <div class="gallery-items">
+        <img src="https://nbyehqtzsxcalumbnefn.supabase.co/storage/v1/object/public/memories//image%2020.jpg" alt="" srcset="">
+      </div>
+    </div>
+    <a href="gallery.html" class="cta-button">Explore More</a>
+    
+    <h2>Contact Me</h2>
+    <p>Want to share your memories with us? Feel free to reach out!</p>
+    <a href="" target="_blank" class="cta-button">Contact Me</a>
+  </section>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="Privacy-Policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p class="copyright">© 2025 YourWebsite.com | All rights reserved.</p>
+    </div>
+</footer>
+  <div id="cookie-banner">
+    <p>
+        This website uses cookies to improve your experience. By using our website, you agree to our 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookie">Accept</button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cookieBanner = document.getElementById("cookie-banner");
+        let acceptButton = document.getElementById("accept-cookie");
+
+        function getCookie(name) {
+            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
+
+        function acceptCookies() {
+            document.cookie = "cookiesAccepted=true; max-age=31536000; path=/";
+            cookieBanner.style.opacity = "0";
+            setTimeout(() => cookieBanner.style.display = "none", 500);
+        }
+
+        if (!getCookie("cookiesAccepted")) {
+            cookieBanner.style.display = "block";
+            setTimeout(() => cookieBanner.style.opacity = "1", 100);
+        }
+
+        acceptButton.addEventListener("click", acceptCookies);
+    });
+</script>
+</body>
+</html>
